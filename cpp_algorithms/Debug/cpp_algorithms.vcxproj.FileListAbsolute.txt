@@ -1,0 +1,2 @@
+C:\Users\theso\Desktop\Gin\src\Algorithm_problems\cpp_algorithms\Debug\cpp_algorithms.exe
+C:\Users\theso\Desktop\Gin\src\Algorithm_problems\cpp_algorithms\Debug\cpp_algorithms.pdb

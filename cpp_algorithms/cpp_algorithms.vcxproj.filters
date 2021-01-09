@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\leetcode">
+      <UniqueIdentifier>{15e78a5e-9ba6-447b-879b-9268df31b339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\kakao">
+      <UniqueIdentifier>{47f25f43-e75b-492b-b6a3-ada5dd083612}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Problems_002_AddTwoNumbers.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_003_LongestSubstringWithoutRepeatingCharacters.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_005_LongestPalindromicSubstring.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_007_ReverseInteger.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_012_IntegerToRoman.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_013_RomanToInteger.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_021_MergeTwoSortedLists.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_035_SearchInsertPosition.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_038_CountAndSay.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_053_MaximumSubarray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_069_Sqrt.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0070_ClimbingStairs.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_078_Subsets.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_083_RemoveDuplicatesFromSortedList.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_088_MergeSortedArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_100_SameTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_104_MaximumDepthOfBinaryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_108_ConvertSortedArrayToBinarySearchTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_118_Pascal%27sTriangle.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_119_Pascal%27sTriangle2.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_121_BestTimeToBuyAndSellStock.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_136_SingleNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_141_LinkedListCycle.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_169_MajorityElement.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_171_ExcelSheetColumnNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0175_CombineTwoTables.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0181_EmployeesEarningMoreThanTheirManagers.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0182_DuplicateEmails.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0191_NumberOf1Bits.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_198_HouseRobber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_202_HappyNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_204_CountPrimes.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_206_ReverseLinkedList.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_217_ContainsDuplicate.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_219_ContainsDuplicate2.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_220_ContainsDuplicate3.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_225_ImplementStackUsingQueues.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_226_InvertBinaryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_237_DeleteNodeInALinkedList.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_242_ValidAnagram.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_258_AddDigits.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0260_SingleNumber3.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0268_MissingNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_283_MoveZeroes.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_287_FindTheDuplicateNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_290_WordPattern.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_292_NimGame.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_326_PowerOfThree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0338_CountingBits.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0344_ReverseString.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_383_RansomNote.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_389_FindTheDifference.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_393_UTF8Validation.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_398_RandomPickIndex.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_400_NthDigit.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_412_FizzBuzz.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_415_AddStrings.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_429_N-aryTreeLevelOrderTraversal.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_442_FindAllDuplicatesInAnArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0448_FindAllNumbersDisappearedInAnArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_451_SortCharactersByFrequency.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_455_AssignCookies.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_461_HammingDistance.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0463_IslandPerimeter.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_475_Heaters.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_476_NumberComplement.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0496_NextGreaterElement1.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0506_RelativeRanks.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0509_FibonacciNumber.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0520_DetectCapital.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_540_SingleElementInASortedArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_547_FriendCircle.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_551_StudentAttendanceRecord1.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_557_ReverseWordsInAString3.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_559_MaximumDepthOfN-aryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_566_ReshapeTheMatrix.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0589_N-aryTreePreorderTraversal.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0590_N-aryTreePostorderTraversal.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_593_ValidSquare.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0595_BigCountries.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0605_CanPlaceFlowers.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0617_MergeTwoBinaryTrees.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0627_SwapSalary.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0637_AverageOfLevelsInBinaryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0657_RobotReturnToOrigin.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0690_EmployeeImportance.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0700_SearchInABinaryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0705_DesignHashSet.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0706_DesignHashMap.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0709_ToLowerCase.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0720_LongestWordInDictionary.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0724_FindPivotIndex.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0739_DailyTempertures.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0766_ToeplitzMatrix.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0771_JewelsAndStones.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0784_LetterCasePermutation.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0791_CustomSortString.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0804_UniqueMorseCodeWords.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0807_MaxIncreaseToKeepCitySkyline.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0821_ShortestDistanceToACharacter.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0832_FlippingAnImage.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0841_KeysAndRooms.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0844_BackspaceStringCompare.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0852_PeakIndexInAMountainArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0860_LemonadeChange.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0867_TransposeMatrix.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0872_LeafSimilarTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0876_MiddleOfTheLinkedList.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0884_UncommonWordsFromTwoSentences.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0888_FairCandySwap.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0896_MonotonicArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0905_SortArrayByParity.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_905_SortArrayByParity.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0912_SortAnArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0922_SortArrayByParity2.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0929_UniqueEmailAddresses.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0942_DIStringMatch.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0951_FlipEquivalentBinaryTrees.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_965_UnivaluedBinaryTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0977_SquaresOfASortedArray.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0986_IntervalListIntersections.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0994_RottingOranges.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_0999_AvailableCapturesForRook.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1002_FindCommonCharacters.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1021_RemoveOutermostParentheses.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1030_MatrixCellsInDistanceOrder.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1038_BinarySearchTreeToGreaterSumTree.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1046_LastStoneWeight.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1047_RemoveAllAdjacentDuplicatesInString.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1089_DuplicateZeros.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1094_CarPooling.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Problems_1189_MaximumNumberOfBalloons.cpp">
+      <Filter>Source Files\leetcode</Filter>
+    </ClCompile>
+    <ClCompile Include="Kakao_2019_Problems_01.cpp">
+      <Filter>Source Files\kakao</Filter>
+    </ClCompile>
+    <ClCompile Include="Kakao_2019_Problems_03.cpp">
+      <Filter>Source Files\kakao</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

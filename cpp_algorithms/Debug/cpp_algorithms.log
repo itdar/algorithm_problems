@@ -1,0 +1,5 @@
+﻿  Problems_100_SameTree.cpp
+  Problems_1047_RemoveAllAdjacentDuplicatesInString.cpp
+C:\Users\theso\Desktop\Gin\src\Algorithm_problems\cpp_algorithms\Problems_1047_RemoveAllAdjacentDuplicatesInString.cpp(21,21): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  cpp_algorithms.vcxproj -> C:\Users\theso\Desktop\Gin\src\Algorithm_problems\cpp_algorithms\Debug\cpp_algorithms.exe
