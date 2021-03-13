@@ -5,8 +5,6 @@
 # 4. Get people who got highest score
 # 5. Return result
 
-# 문제 설명이 개같고 테스트케이스도 병신
-
 def solution(answers):
     result = []
     
