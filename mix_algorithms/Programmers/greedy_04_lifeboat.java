@@ -19,6 +19,7 @@ class Solution {
         // 2.
         // 내부라이브러리 (오름차순만 됨)
         Arrays.sort(people);
+        
         // Selection sort (내림차순이 라이브러리 안돼서 그냥 만들었었음)
         // for (int i = 0; i < people.length-1; ++i) {
         //     int maxIndex = i;
