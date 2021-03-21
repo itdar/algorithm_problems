@@ -20,7 +20,15 @@ public class insertion_sort {
     }
 
     public static int[] insertionSort(int[] numbers) {
-        
+        int temp;
+        int j;
+        for (int i = 1; i < numbers.length; ++i) {
+            temp = numbers[i];
+            for (j = i-1; j >= 0 && numbers[j] > temp; --j) {
+                numbers[j+1] = numbers[j];
+            }
+            numbers[++j] = temp;
+        }
         return numbers;
     }
 }
