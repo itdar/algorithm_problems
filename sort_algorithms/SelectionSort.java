@@ -1,8 +1,7 @@
 package sort_algorithms;
 
-import java.util.*;
+public class SelectionSort {
 
-class TestMain {
     public static void main(String args[]) {
         System.out.println("Hell");
 
@@ -13,27 +12,28 @@ class TestMain {
         }
 
         System.out.println("\n >> Sorting...");
-        numbers = bubbleSort(numbers);
+        numbers = selectionSort(numbers);
 
         for (int i = 0; i < numbers.length; ++i)
             System.out.print(numbers[i] + " ");
         
     }
 
-    public static int[] bubbleSort(int[] numbers) {
+    public static int[] selectionSort(int[] numbers) {
         int temp;
+        int tempIndex;
         for (int i = 0; i < numbers.length-1; ++i) {
-            for (int j = 0; j < numbers.length-1-i; ++j) {
-                if (numbers[j] > numbers[j+1]) {
+            tempIndex = i;
+            temp = numbers[i];
+            for (int j = i+1; j < numbers.length; ++j) {
+                if (temp > numbers[j]) {
+                    tempIndex = j;
                     temp = numbers[j];
-                    numbers[j] = numbers[j+1];
-                    numbers[j+1] = temp;
                 }
             }
+            numbers[tempIndex] = numbers[i];
+            numbers[i] = temp;
         }
         return numbers;
     }
 }
-
-
-

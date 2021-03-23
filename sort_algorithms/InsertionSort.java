@@ -1,6 +1,6 @@
 package sort_algorithms;
 
-public class selection_sort {
+public class InsertionSort {
 
     public static void main(String args[]) {
         System.out.println("Hell");
@@ -12,27 +12,22 @@ public class selection_sort {
         }
 
         System.out.println("\n >> Sorting...");
-        numbers = selectionSort(numbers);
+        numbers = insertionSort(numbers);
 
         for (int i = 0; i < numbers.length; ++i)
             System.out.print(numbers[i] + " ");
         
     }
 
-    public static int[] selectionSort(int[] numbers) {
+    public static int[] insertionSort(int[] numbers) {
         int temp;
-        int tempIndex;
-        for (int i = 0; i < numbers.length-1; ++i) {
-            tempIndex = i;
+        int j;
+        for (int i = 1; i < numbers.length; ++i) {
             temp = numbers[i];
-            for (int j = i+1; j < numbers.length; ++j) {
-                if (temp > numbers[j]) {
-                    tempIndex = j;
-                    temp = numbers[j];
-                }
+            for (j = i-1; j >= 0 && numbers[j] > temp; --j) {
+                numbers[j+1] = numbers[j];
             }
-            numbers[tempIndex] = numbers[i];
-            numbers[i] = temp;
+            numbers[++j] = temp;
         }
         return numbers;
     }
