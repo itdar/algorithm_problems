@@ -10,7 +10,7 @@ class Camping {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
+        
         while (true) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int L = Integer.parseInt(st.nextToken());
