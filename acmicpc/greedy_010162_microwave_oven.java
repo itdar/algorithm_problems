@@ -10,7 +10,7 @@ import java.util.*;
 //  2.3. 횟수를 센다.
 // 3. Return count
 
-class Main {
+class MicrowaveOven {
     public static void main(String args[]) {
         
         Scanner sc = new Scanner(System.in);

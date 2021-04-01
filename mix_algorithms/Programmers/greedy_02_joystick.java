@@ -1,3 +1,5 @@
+package mix_algorithms.Programmers;
+
 // ASCII 65~ 90 (A~ Z)
 // Process #2  (greedy)
 // 1. Input name
@@ -12,7 +14,7 @@
 import java.util.*;
 
 
-class Solution {
+class Joystick {
     public int solution(String name) {
         int count = 0;
         int currentIndex = 0;

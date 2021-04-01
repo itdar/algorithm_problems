@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.*;
 
-class Main {
+class ATM {
     public static void main(String args[]) throws IOException {
         Scanner scanner = new Scanner(System.in);
         

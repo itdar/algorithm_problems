@@ -1,3 +1,5 @@
+package mix_algorithms.Programmers;
+
 // 문제에서 예를 들 때 전체 조합을 나열하고 가장 큰 것을 골라서 순서가 변해도 상관 없을 것 같으나,
 // 실제로 답은 순서는 건드리지 않고 찾아나가야함.
 
@@ -10,7 +12,7 @@
 //  2.4. 인덱스를 바꾼다.
 // 3. 결과 반환한다.
 
-class Solution {
+class MakeBiggestNumber {
     public String solution(String number, int k) {
         StringBuilder answer = new StringBuilder("");
         int stdLength = number.length()-k;

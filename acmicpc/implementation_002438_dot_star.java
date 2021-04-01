@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 class Dot {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         //BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         //Scanner sc = new Scanner(System.in);
