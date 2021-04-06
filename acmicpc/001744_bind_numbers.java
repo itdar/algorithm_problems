@@ -11,7 +11,7 @@ import java.util.*;
 //  4.1. 0이 있었으면, 마지막 음수 하나는 제한다.
 // 5. 총합 반환한다, 이 때, 1은 따로 더해준다.
 
-class TidingNumbers {
+class BindingNumbers {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
