@@ -2,8 +2,7 @@ package tech_interview_preparation.search_algorithms;
 
 import java.util.*;
 
-
-class BFS {
+class DFS {
 
     static class Vertex {
 //        public int name;
@@ -32,31 +31,30 @@ class BFS {
         }
     }
 
-// Process (BFS)
+// Process (DFS)
 // 1. Input 2d array plate (or, node and list for graph)
 // 2. 아무 vertex에서 시작한다.
-// 3. 큐가 빌 때까지 반복한다. (모두 방문할 때까지 반복)
-//  3.1. 큐에서 vertex 꺼낸다.
+// 3. 스택이 빌 때까지 반복한다. (모두 방문할 때까지 반복)
+//  3.1. 스택에서 vertex 꺼낸다.
 //  3.2. 방문 표기한다.
 //  3.3. 꺼낸 vertex와 연결된 것에 반복한다.
-//   3.3.1. 큐에 넣는다.
+//   3.3.1. 스택에 넣는다.
 //  3.4. 방문한 것 출력해본다.
 // 4. 끝낸다.
-    public static void BreadthFirstSearch(Vertex root) {
-        Queue<Vertex> queue = new LinkedList<>();
-        queue.add(root);
+    public static void DepthFirstSearch(Vertex root) {
+        Stack<Vertex> stack = new Stack<>();
+        stack.add(root);
 
         List<Integer> returnValues = new LinkedList<>();
 
-        while (queue.size() > 0) {
-            Vertex vertex = queue.poll();
-
+        while (stack.size() > 0) {
+            Vertex vertex = stack.pop();
             if (!vertex.visited) {
                 vertex.visited = true;
 
                 for (int i = 0; i < vertex.adjacents.size(); ++i) {
                     if (!vertex.adjacents.get(i).visited) {
-                        queue.add(vertex.adjacents.get(i));
+                        stack.add(vertex.adjacents.get(i));
                     }
                 }
 
@@ -88,9 +86,11 @@ class BFS {
         vertex5.addAdjacent(vertex1);
         vertex5.addAdjacent(vertex3);
 
-       BreadthFirstSearch(vertex2);
-        System.out.println("");
-        // DepthFirstSearch(vertex2);
+//        BreadthFirstSearch(vertex2);
         // System.out.println("");
+        DepthFirstSearch(vertex2);
+        System.out.println("");
     }
+
+
 }
