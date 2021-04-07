@@ -1,4 +1,4 @@
-package mix_algorithms.programmers;
+package algorithm_sites.programmers;
 
 // 문제에서 예를 들 때 전체 조합을 나열하고 가장 큰 것을 골라서 순서가 변해도 상관 없을 것 같으나,
 // 실제로 답은 순서는 건드리지 않고 찾아나가야함.

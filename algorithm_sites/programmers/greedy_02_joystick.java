@@ -1,4 +1,4 @@
-package mix_algorithms.programmers;
+package algorithm_sites.programmers;
 
 // ASCII 65~ 90 (A~ Z)
 // Process #2  (greedy)

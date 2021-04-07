@@ -1,4 +1,4 @@
-package acmicpc;
+package algorithm_sites.acmicpc;
 
 import java.util.*;
 

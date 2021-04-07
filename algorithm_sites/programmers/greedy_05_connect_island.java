@@ -1,4 +1,4 @@
-package mix_algorithms.programmers;
+package algorithm_sites.programmers;
 // Process
 // 1. Input n, costs
 // 2. Make costs list for easy access
