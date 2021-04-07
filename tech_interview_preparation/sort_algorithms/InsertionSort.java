@@ -1,7 +1,7 @@
-package sort_algorithms;
+package tech_interview_preparation.sort_algorithms;
 
+public class InsertionSort {
 
-public class BubbleSort {
     public static void main(String args[]) {
         System.out.println("Hell");
 
@@ -12,27 +12,23 @@ public class BubbleSort {
         }
 
         System.out.println("\n >> Sorting...");
-        numbers = bubbleSort(numbers);
+        numbers = insertionSort(numbers);
 
         for (int i = 0; i < numbers.length; ++i)
             System.out.print(numbers[i] + " ");
         
     }
 
-    public static int[] bubbleSort(int[] numbers) {
+    public static int[] insertionSort(int[] numbers) {
         int temp;
-        for (int i = 0; i < numbers.length-1; ++i) {
-            for (int j = 0; j < numbers.length-1-i; ++j) {
-                if (numbers[j] > numbers[j+1]) {
-                    temp = numbers[j];
-                    numbers[j] = numbers[j+1];
-                    numbers[j+1] = temp;
-                }
+        int j;
+        for (int i = 1; i < numbers.length; ++i) {
+            temp = numbers[i];
+            for (j = i-1; j >= 0 && numbers[j] > temp; --j) {
+                numbers[j+1] = numbers[j];
             }
+            numbers[++j] = temp;
         }
         return numbers;
     }
 }
-
-
-

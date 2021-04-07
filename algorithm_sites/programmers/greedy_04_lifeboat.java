@@ -1,4 +1,5 @@
 package algorithm_sites.programmers;
+
 // Process
 // 1. Input
 // 2. Sort people in ascending way
@@ -11,7 +12,7 @@ package algorithm_sites.programmers;
 
 import java.util.*;
 
-class Solution {
+class Lifeboat {
     public int solution(int[] people, int limit) {
         int boatCount = 0;
         int frontIndex = 0;

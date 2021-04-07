@@ -9,7 +9,7 @@ package algorithm_sites.programmers;
 
 import java.util.*;
 
-class Solution {
+class TrafficCamera {
     public int solution(int[][] routes) {
         int cameraCount = 0;
         

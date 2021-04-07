@@ -1,4 +1,4 @@
-package sort_algorithms;
+package tech_interview_preparation.sort_algorithms;
 
 public class QuickSort {
 
