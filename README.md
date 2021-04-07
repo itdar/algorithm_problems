@@ -1,6 +1,9 @@
-# 알고리즘 문제풀이, 자료구조, 코딩테스트, 기술면접 등을 위함
-# Algorithm problems what I solved, and Algorithms for tech interview
+## 알고리즘 문제풀이, 자료구조, 코딩테스트, 기술면접 등을 위함
+### Algorithm problems what I solved, and Algorithms for tech interview
+=============
 
+<pre>
+<code>
 Algorithm_problems
  |-- algorithm_sites: 문제풀이 사이트의 푼 문제들
         |
@@ -23,3 +26,6 @@ Algorithm_problems
         |
  |
  |-- etc..
+</code>
+</pre>
+
