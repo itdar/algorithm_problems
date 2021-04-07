@@ -1,3 +1,4 @@
+package mix_algorithms.programmers;
 // Process
 // 1. Input
 // 2. Sort people in ascending way

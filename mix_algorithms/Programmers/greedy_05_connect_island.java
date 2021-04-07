@@ -1,3 +1,4 @@
+package mix_algorithms.programmers;
 // Process
 // 1. Input n, costs
 // 2. Make costs list for easy access
