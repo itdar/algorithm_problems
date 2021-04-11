@@ -92,7 +92,7 @@ import java.util.*;
 //   3.1.2. If not -> next
 // 4. Return totalCost
 
-class Solution {
+class ConnectIsland {
     public int solution(int n, int[][] costs) {
         int totalCost = 0;
         List<Integer> connected = new LinkedList<>();
