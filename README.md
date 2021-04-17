@@ -1,7 +1,6 @@
 ## 알고리즘 문제풀이, 자료구조, 코딩테스트, 기술면접 등을 위함
 ### Algorithm problems what I solved, and Algorithms for tech interview
 
-=============
 
 <pre>
 <code>
