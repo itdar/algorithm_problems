@@ -47,6 +47,7 @@ class Airport {
             ++i;
         }
 
+        // 3. 
         System.out.println(count);
     }
     
