@@ -62,12 +62,10 @@ class SafetyArea {
                     }
                 }
             }
-
-            if (count >= 0)
-                safetyCountList.add(count);
+            safetyCountList.add(count);
         }
-
-        System.out.println(Math.max(Collections.max(safetyCountList), 1));
+        System.out.println(Collections.max(safetyCountList));
+        // System.out.println(Math.max(Collections.max(safetyCountList), 1));
     }
 
     public static class Area {
