@@ -9,7 +9,7 @@ Algorithm_problems
         |
         |-- acmicpc: 백준
         |
-        |-- codeSignal: 예전 코드파이트, 코드시그널
+        |-- codeSignal: 현재 코드시그널 (예전 코드파이트)
         |
         |-- programmers: 프로그래머스
         |
