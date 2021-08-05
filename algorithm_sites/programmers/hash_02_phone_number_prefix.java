@@ -1,5 +1,6 @@
 package algorithm_sites.programmers;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class hash_02_phone_number_prefix {
@@ -17,7 +18,7 @@ public class hash_02_phone_number_prefix {
 
 }
 
-// HashMap
+// HashSet
 class PhoneNumberPrefix {
     public boolean solution(String[] phone_book) {
         HashSet<String> set = new HashSet<>();
@@ -37,3 +38,25 @@ class PhoneNumberPrefix {
         return true;
     }
 }
+
+//// HashMap
+//class PhoneNumberPrefix {
+//    public boolean solution(String[] phone_book) {
+//        HashMap<String, String> map = new HashMap<>();
+//
+//        for (int i = 0; i < phone_book.length; ++i) {
+//            map.put(phone_book[i], phone_book[i]);
+//        }
+//
+//        for (int i = 0; i < phone_book.length; ++i) {
+//            final int index = i;
+//            if (map.values().stream()
+//                    .filter(s -> phone_book[index].startsWith(s))
+//                    .count() > 1) {
+//                return false;
+//            }
+//        }
+//
+//        return true;
+//    }
+//}
