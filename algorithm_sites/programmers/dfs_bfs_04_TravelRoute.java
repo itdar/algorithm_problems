@@ -67,7 +67,7 @@ class dfs_bfs_04_TravelRoute {
     public static boolean dfs(String from, List<String> order, int depth) {
         order.add(from);
 
-        if (order.size() == totalCount+1) {
+        if (order.size() == map.size()+1) {
             // System.out.println("=========Found");
             return true;
         }

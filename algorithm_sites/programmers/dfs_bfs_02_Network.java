@@ -2,6 +2,59 @@ package algorithm_sites.programmers;
 
 import java.util.*;
 
+class SolutionNetwork2 {
+    static boolean[] visited;
+    static int count = 0;
+
+    public static int solution2(int computerCount, int[][] computers) {
+        visited = new boolean[computerCount];
+
+        for (int i = 0; i < visited.length; ++i) {
+            visited[i] = false;
+        }
+
+        for (int i = 0; i < visited.length; ++i) {
+            if (!visited[i]) {
+                ++count;
+                dfs(computers, i);
+            }
+        }
+
+        return count;
+    }
+
+    public static void dfs(int[][] computers, int index) {
+        visited[index] = true;
+
+        for (int i = 0; i < computers[index].length; ++i) {
+            if ((computers[index][i] == 1 || computers[i][index] == 1) && !visited[i]) {
+                dfs(computers, i);
+            }
+        }
+    }
+
+    /**
+     * 테스트케이스
+     * 3	[[1, 1, 0], [1, 1, 0], [0, 0, 1]]	2
+     * 3	[[1, 1, 0], [1, 1, 1], [0, 1, 1]]	1
+     */
+    public static void main(String args[]) {
+        int computerCount = 3;
+        int[][] computers = new int[3][3];
+        computers[0][0] = 1;
+        computers[1][1] = 1;
+        computers[2][2] = 1;
+        computers[0][1] = 1;
+        computers[1][0] = 1;
+        computers[2][1] = 1;
+
+        int result = solution2(computerCount, computers);
+
+        System.out.println("Result: " + result);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process
 // 1. Input computerCount, computers(2d network condition)
 // 2. Make VertexNetwork
@@ -18,19 +71,19 @@ import java.util.*;
 
 class SolutionNetwork {
 
-    public static void main(String args[]) {
-        int computerCount = 3;
-        int[][] computers = new int[3][3];
-        computers[0][0] = 1;
-        computers[1][1] = 1;
-        computers[2][2] = 1;
-        computers[0][1] = 1;
-        computers[1][0] = 1;
-    
-        int result = solution(computerCount, computers);
-    
-        System.out.println("Result: " + result);
-    }
+//    public static void main(String args[]) {
+//        int computerCount = 3;
+//        int[][] computers = new int[3][3];
+//        computers[0][0] = 1;
+//        computers[1][1] = 1;
+//        computers[2][2] = 1;
+//        computers[0][1] = 1;
+//        computers[1][0] = 1;
+//
+//        int result = solution(computerCount, computers);
+//
+//        System.out.println("Result: " + result);
+//    }
 
     public static int solution(int computerCount, int[][] computers) {
         int networkCount = 0;
