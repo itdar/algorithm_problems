@@ -5,6 +5,10 @@
 <pre>
 <code>
 Algorithm_problems
+ |
+ |-- algo_lib: 문제풀이 시 재사용 될만한 메서드들 등
+ |
+ |
  |-- algorithm_sites: 문제풀이 사이트의 푼 문제들
         |
         |-- acmicpc: 백준
