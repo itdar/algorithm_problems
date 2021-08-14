@@ -10,9 +10,7 @@ public class BinaryGap {
         int length = 0;
         for (int i = 0; i < binary.length(); ++i) {
             if (binary.charAt(i) == '1') {
-                if (length > max) {
-                    max = length;
-                }
+                max = Math.max(max, length);
                 length = 0;
             } else {
                 ++length;
