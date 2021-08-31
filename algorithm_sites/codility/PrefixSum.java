@@ -1,4 +1,4 @@
-package codility;
+package algorithm_sites.codility;
 
 public class PrefixSum {
     public static int solution1(int[] A) {
