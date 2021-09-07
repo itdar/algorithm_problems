@@ -4,22 +4,7 @@ import java.util.HashMap;
 
 public class hash_01_no_completion_player {
 
-    public static void main(String args[]) {
-
-        Solution solution = new Solution();
-
-        String[] participant = new String[] {"leo", "eden", "kiki"};
-        String[] completion = new String[] {"eden", "kiki"};
-        String result = solution.solution(participant, completion);
-
-        System.out.println(result);
-    }
-
-}
-
-// HashMap
-class Solution {
-    public String solution(String[] participant, String[] completion) {
+    public static String solution(String[] participant, String[] completion) {
         HashMap<String, Integer> map = new HashMap<>();
 
         for (int i = 0; i < participant.length; ++i) {
@@ -46,4 +31,15 @@ class Solution {
 
         return "error";
     }
+    public static void main(String args[]) {
+
+//        Solution solution = new Solution();
+
+        String[] participant = new String[] {"leo", "eden", "kiki"};
+        String[] completion = new String[] {"eden", "kiki"};
+        String result = solution(participant, completion);
+
+        System.out.println(result);
+    }
+
 }
