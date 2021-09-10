@@ -2,7 +2,7 @@ package algorithm_sites.leetcode;
 
 import java.util.*;
 
-public class LC_00001_TowSum {
+public class LeetCode_00001_TowSum {
 
     public int[] twoSum_1(int[] nums, int target) {
         if (nums.length == 2) {
@@ -58,7 +58,7 @@ public class LC_00001_TowSum {
     }
 
     public static void main(String args[]) {
-        LC_00001_TowSum lc = new LC_00001_TowSum();
+        LeetCode_00001_TowSum lc = new LeetCode_00001_TowSum();
 
         int[] result = lc.twoSum_3(new int[]{3, 2, 4}, 6);
 

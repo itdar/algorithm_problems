@@ -3,7 +3,7 @@ package algorithm_sites.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LC_0013_RomanToInteger {
+public class LeetCode_0013_RomanToInteger {
 
     public static int romanToInt_2(String s) {
         Map<Character, Integer> map = new HashMap<>();

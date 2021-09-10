@@ -1,6 +1,6 @@
 package algorithm_sites.leetcode;
 
-public class LC_0014_LongestCommonPrefix {
+public class LeetCode_0014_LongestCommonPrefix {
 
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length < 2) {

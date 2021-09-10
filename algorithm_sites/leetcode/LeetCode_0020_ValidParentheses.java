@@ -2,7 +2,7 @@ package algorithm_sites.leetcode;
 
 import java.util.Stack;
 
-public class LC_0020_ValidParentheses {
+public class LeetCode_0020_ValidParentheses {
 
     public static boolean isValid_1(String s) {
         Stack<Character> stack = new Stack<>();

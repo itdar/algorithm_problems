@@ -1,6 +1,6 @@
 package algorithm_sites.leetcode;
 
-public class LC_0007_ReverseInteger {
+public class LeetCode_0007_ReverseInteger {
 
     public int reverse_3(int x) {
         if (x == 0) {
@@ -96,7 +96,7 @@ public class LC_0007_ReverseInteger {
 
     public static void main(String args[]) {
 
-        LC_0007_ReverseInteger leet = new LC_0007_ReverseInteger();
+        LeetCode_0007_ReverseInteger leet = new LeetCode_0007_ReverseInteger();
 
         int reverse = leet.reverse_3(-321);
 

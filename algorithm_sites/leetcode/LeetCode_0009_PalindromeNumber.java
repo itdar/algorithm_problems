@@ -1,6 +1,6 @@
 package algorithm_sites.leetcode;
 
-public class LC_0009_PalindromeNumber {
+public class LeetCode_0009_PalindromeNumber {
 
     public static boolean isPalindrome_2(int x) {
         if (x < 0) {

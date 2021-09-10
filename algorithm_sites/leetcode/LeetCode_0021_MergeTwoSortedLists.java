@@ -1,16 +1,15 @@
 package algorithm_sites.leetcode;
 
+public class LeetCode_0021_MergeTwoSortedLists {
+    public static class ListNode {
+        int val;
+        ListNode next;
 
-class ListNode {
-    int val;
-    ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
 
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
-
-public class LC_0021_MergeTwoSortedLists {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode merged = new ListNode();
         ListNode current = merged;
