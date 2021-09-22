@@ -21,7 +21,7 @@ Algorithm_problems
         |
         |-- goorm: 구름
         |
-        |-- hackerrank: 해커랭크
+        |-- etc: 기타 면접코테 등등
         |
         |-- programmers: 프로그래머스
         |
