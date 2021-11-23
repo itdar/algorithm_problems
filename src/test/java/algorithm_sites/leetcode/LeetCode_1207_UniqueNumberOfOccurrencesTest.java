@@ -14,7 +14,6 @@ public class LeetCode_1207_UniqueNumberOfOccurrencesTest {
         boolean answer = test.uniqueOccurrences(new int[]{1, 2, 2, 1, 1, 3});
 
         assertThat(answer).isEqualTo(true);
-
     }
 
 }

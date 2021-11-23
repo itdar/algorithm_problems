@@ -11,7 +11,7 @@ public class LeetCode_1207_UniqueNumberOfOccurrences {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int integer : arr) {
-            map.putIfAbsent(integer, map.getOrDefault(integer, 1) + 1);
+            map.put(integer, map.getOrDefault(integer, 1) + 1);
         }
 
         Set<Integer> set = new HashSet<>();
