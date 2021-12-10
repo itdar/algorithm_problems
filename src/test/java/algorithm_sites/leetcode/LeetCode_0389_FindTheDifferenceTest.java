@@ -11,7 +11,7 @@ public class LeetCode_0389_FindTheDifferenceTest {
 
         Assertions.assertThat(test.findTheDifference("abcd", "abcde")).isEqualTo('e');
         Assertions.assertThat(test.findTheDifference("", "y")).isEqualTo('y');
-        Assertions.assertThat(test.findTheDifference("aa", "aa")).isEqualTo('a');
+        Assertions.assertThat(test.findTheDifference("aa", "a")).isEqualTo('a');
         Assertions.assertThat(test.findTheDifference("ae", "aea")).isEqualTo('a');
     }
 
