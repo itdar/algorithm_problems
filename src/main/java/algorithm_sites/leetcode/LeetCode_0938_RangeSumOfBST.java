@@ -7,21 +7,17 @@ import java.util.Objects;
 
 public class LeetCode_0938_RangeSumOfBST {
     private List<Integer> list = new ArrayList<>();
+    private int count = 0;
+    private int low;
+    private int high;
 
     public int rangeSumBST(TreeNode938 root, int low, int high) {
+        this.low = low;
+        this.high = high;
 
         iterateNodes(root);
 
-        Collections.sort(list);
-
-        int sum = 0;
-        for (Integer integer : list) {
-            if (low <= integer && integer <= high) {
-                sum += integer;
-            }
-        }
-
-        return sum;
+        return count;
     }
 
     private void iterateNodes(TreeNode938 node) {
@@ -29,7 +25,10 @@ public class LeetCode_0938_RangeSumOfBST {
             return;
         }
 
-        list.add(node.val);
+        if (low <= node.val && node.val <= high) {
+            count += node.val;
+        }
+
         iterateNodes(node.left);
         iterateNodes(node.right);
     }
