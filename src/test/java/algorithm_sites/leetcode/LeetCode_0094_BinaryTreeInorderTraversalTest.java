@@ -26,7 +26,7 @@ public class LeetCode_0094_BinaryTreeInorderTraversalTest {
 
         TreeNode94 root = new TreeNode94();
 
-        assertThat(test.inorderTraversal(root)).containsExactly();
+        assertThat(test.inorderTraversal(root)).containsExactly(0);
     }
 
     @Test
