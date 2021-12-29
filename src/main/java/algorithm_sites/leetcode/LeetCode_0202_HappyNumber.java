@@ -3,6 +3,9 @@ package algorithm_sites.leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Written by Gin (thesockerr@gmail.com) on 2021/12/29.
+ */
 public class LeetCode_0202_HappyNumber {
 
     boolean isHappy(int n) {

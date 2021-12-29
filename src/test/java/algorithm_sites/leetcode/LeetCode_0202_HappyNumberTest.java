@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Written by Gin (thesockerr@gmail.com) on 2021/12/29.
+ */
 public class LeetCode_0202_HappyNumberTest {
 
     @Test
