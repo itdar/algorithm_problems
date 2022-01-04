@@ -96,4 +96,36 @@ class LeetCode_0130_SurroundedRegionsTest {
         Assertions.assertArrayEquals(board, target);
     }
 
+    @DisplayName("BFS, leetcode 130. Surrounded Regions Test 5.")
+    @Test
+    void surroundedRegionsTest_5() {
+        LeetCode_0130_SurroundedRegions test = new LeetCode_0130_SurroundedRegions();
+
+        char[][] board = new char[][]
+            {   {'O','X','O','O','O','O','O','O','O'},
+                {'O','O','O','X','O','O','O','O','X'},
+                {'O','X','O','X','O','O','O','O','X'},
+                {'O','O','O','O','X','O','O','O','O'},
+                {'X','O','O','O','O','O','O','O','X'},
+                {'X','X','O','O','X','O','X','O','X'},
+                {'O','O','O','X','O','O','O','O','O'},
+                {'O','O','O','X','O','O','O','O','O'},
+                {'O','O','O','O','O','X','X','O','O'}};
+
+        test.solve(board);
+
+        char[][] target = new char[][]
+            {   {'O','X','O','O','O','O','O','O','O'},
+                {'O','O','O','X','O','O','O','O','X'},
+                {'O','X','O','X','O','O','O','O','X'},
+                {'O','O','O','O','X','O','O','O','O'},
+                {'X','O','O','O','O','O','O','O','X'},
+                {'X','X','O','O','X','O','X','O','X'},
+                {'O','O','O','X','O','O','O','O','O'},
+                {'O','O','O','X','O','O','O','O','O'},
+                {'O','O','O','O','O','X','X','O','O'}};
+
+        Assertions.assertArrayEquals(board, target);
+    }
+
 }

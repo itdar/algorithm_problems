@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class LeetCode_0130_SurroundedRegions {
-    char[][] cpyBoard;
     boolean[][] visited;
 
     int[] rotateX = {1,-1,0,0};
@@ -15,62 +14,61 @@ public class LeetCode_0130_SurroundedRegions {
     Queue<Coords130> queue = new LinkedList<>();
     List<Coords130> coordsBuffer = new ArrayList<>();
 
+    int height;
+    int width;
+
     public void solve(char[][] board) {
         if (board.length < 2 || board[0].length < 2) {
             return;
         }
 
-        cpyBoard = board;
-        visited = new boolean[cpyBoard.length][cpyBoard[0].length];
+        height = board.length;
+        width = board[0].length;
+        visited = new boolean[height][width];
 
-//        for (int m = 0; m < cpyBoard.length * cpyBoard[0].length; ++m)
-        {
-            for (int i = 1; i < cpyBoard.length-1; ++i) {
-                for (int j = 1; j < cpyBoard[i].length-1; ++j) {
-                    queue.add(new Coords130(i,j));
-                    bfs();
-                    clear();
+        bfsAllExceptOutside(board);
+
+//        printForDebugging(board);
+    }
+
+    private void bfsAllExceptOutside(char[][] board) {
+        for (int i = 1; i < height-1; ++i) {
+            for (int j = 1; j < width-1; ++j) {
+                if (board[i][j] != 'O') {
+                    continue;
                 }
+                queue.add(new Coords130(i,j));
+                bfs(board);
+                clear();
             }
-        }
-
-        // print
-        System.out.println("print, start");
-        for (int i = 0; i < cpyBoard.length; ++i) {
-            for (int j = 0; j < cpyBoard[i].length; ++j) {
-                System.out.print(cpyBoard[i][j] + " ");
-            }
-            System.out.println("");
         }
     }
 
-    private void bfs() {
+    private void bfs(char[][] board) {
+        int x;
+        int y;
+
         while (!queue.isEmpty()) {
             Coords130 block = queue.poll();
-            int x = block.x;
-            int y = block.y;
+            x = block.x;
+            y = block.y;
 
-            if (x < 0 || y < 0 || x > cpyBoard.length-1 || y > cpyBoard[0].length-1) {
+            if (isOutBound(x, y)) {
                 break;
             }
 
-            if ((x < 1 || y < 1 || x > cpyBoard.length-2 || y > cpyBoard[0].length-2)
-            && cpyBoard[x][y] == 'O' && !visited[x][y]) {
-                rollback();
+            if (isDirtyConnection(x, y, board)) {
+                rollback(board);
                 break;
             }
 
-            if (visited[x][y]
-                || cpyBoard[x][y] == 'X'
-                || x < 1
-                || y < 1
-                || x > cpyBoard.length-2
-                || y > cpyBoard[0].length-2) {
+            if (isInvalidBlock(x, y, board)) {
                 continue;
             }
 
             coordsBuffer.add(new Coords130(x, y));
-            cpyBoard[x][y] = 'X';
+
+            board[x][y] = 'X';
             visited[x][y] = true;
 
             for (int i = 0; i < 4; ++i) {
@@ -82,19 +80,36 @@ public class LeetCode_0130_SurroundedRegions {
         }
     }
 
-    private void rollback() {
-        queue.clear();
+    private boolean isInvalidBlock(int x, int y, char[][] board) {
+        return visited[x][y]
+            || board[x][y] == 'X'
+            || x < 1
+            || y < 1
+            || x > height-2
+            || y > width-2;
+    }
+
+    private boolean isDirtyConnection(int x, int y, char[][] board) {
+        return (x < 1 || y < 1 || x > height-2 || y > width-2)
+            && board[x][y] == 'O';
+    }
+
+    private boolean isOutBound(int x, int y) {
+        return x < 0 || y < 0 || x > height-1 || y > width-1;
+    }
+
+    private void rollback(char[][] board) {
         for (Coords130 coords130 : coordsBuffer) {
-            cpyBoard[coords130.x][coords130.y] = 'O';
+            board[coords130.x][coords130.y] = 'O';
             visited[coords130.x][coords130.y] = false;
         }
+        queue.clear();
         coordsBuffer.clear();
     }
 
     private void clear() {
         queue.clear();
         coordsBuffer.clear();
-        visited = new boolean[cpyBoard.length][cpyBoard[0].length];
     }
 
     static class Coords130 {
@@ -105,5 +120,15 @@ public class LeetCode_0130_SurroundedRegions {
             this.x = x;
             this.y = y;
         }
+    }
+
+    private void printForDebugging(char[][] board) {
+        for (char[] chars : board) {
+            for (char aChar : chars) {
+                System.out.print(aChar + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println("\n");
     }
 }
