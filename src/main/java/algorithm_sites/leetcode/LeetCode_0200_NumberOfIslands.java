@@ -1,5 +1,8 @@
 package algorithm_sites.leetcode;
 
+import java.awt.Point;
+import java.util.Stack;
+
 public class LeetCode_0200_NumberOfIslands {
 
     int[] xx = new int[] {1, 0, -1, 0};
@@ -26,7 +29,8 @@ public class LeetCode_0200_NumberOfIslands {
             for (int j = 0; j < grid[0].length; ++j) {
                 if (!visited[i][j] && grid[i][j] != '0') {
                     ++count;
-                    dfs(i, j);
+//                    dfs_recursive(i, j);
+                    dfs_stack(i, j);
                 }
             }
         }
@@ -34,30 +38,36 @@ public class LeetCode_0200_NumberOfIslands {
         return count;
     }
 
-    public void dfs(int x, int y) {
+    public void dfs_stack(int x, int y) {
+        Stack<Point> stack = new Stack<>();
+
+        stack.add(new Point(x, y));
+
+        while (!stack.isEmpty()) {
+            Point point = stack.pop();
+
+            for (int i = 0; i < 4; ++i) {
+                int dx = point.x + xx[i];
+                int dy = point.y + yy[i];
+
+                if (dx >= 0 && dx < m && dy >= 0 && dy < n && !visited[dx][dy] && grids[dx][dy] != '0') {
+                    visited[dx][dy] = true;
+                    stack.add(new Point(dx, dy));
+                }
+            }
+        }
+    }
+
+    public void dfs_recursive(int x, int y) {
         for (int i = 0; i < 4; ++i) {
             int dx = x + xx[i];
             int dy = y + yy[i];
 
             if (dx >= 0 && dx < m && dy >= 0 && dy < n && !visited[dx][dy] && grids[dx][dy] != '0') {
                 visited[dx][dy] = true;
-                dfs(dx, dy);
+                dfs_recursive(dx, dy);
             }
         }
     }
-
-    public static void main(String[] args) {
-        LeetCode_0200_NumberOfIslands test = new LeetCode_0200_NumberOfIslands();
-
-        char[][] params = new char[][] {{'1','0'}, {'0','1'}};
-        test.numIslands(params);
-
-    }
-
-}
-
-class Node {
-    boolean isVisited = false;
-    int x;
 
 }
