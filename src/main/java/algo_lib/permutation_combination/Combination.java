@@ -1,4 +1,4 @@
-package algo_lib;
+package algo_lib.permutation_combination;
 
 import java.util.ArrayList;
 import java.util.List;
