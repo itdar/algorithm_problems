@@ -4,9 +4,9 @@ public class PermutationExample {
     static int num = 0;
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
+        int[] arr = {1,2,3,1};
         int n = arr.length;
-        int r = 2;
+        int r = 4;
 
         int[] output = new int [n];
         boolean[] visited = new boolean [n];
