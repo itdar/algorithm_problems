@@ -16,11 +16,10 @@ public class Greedy_02_Joystick {
             sb.append('A');
         }
 
-        int currentIndex = 0;
+        int startIndex = 0;
 
-        StringBuilder rightSb = new StringBuilder(sb.toString());
-        rightSb.setCharAt(currentIndex, target.charAt(currentIndex));
-        recursiveCount(rightSb, target, count+countAToAnyUpper(target.charAt(currentIndex)), currentIndex);
+        sb.setCharAt(startIndex, target.charAt(startIndex));
+        recursiveCount(sb, target, count+countAToAnyUpper(target.charAt(startIndex)), startIndex);
 
         return Collections.min(counts);
     }
@@ -41,15 +40,12 @@ public class Greedy_02_Joystick {
                 rightNewIndex -= target.length();
             }
 
-            if (target.charAt(rightNewIndex) == sb.charAt(rightNewIndex)) {
-                ++rightCount;
-            } else {
+            if (target.charAt(rightNewIndex) != sb.charAt(rightNewIndex)) {
                 break;
             }
+
+            ++rightCount;
         }
-        StringBuilder rightSb = new StringBuilder(sb.toString());
-        rightSb.setCharAt(rightNewIndex, target.charAt(rightNewIndex));
-        recursiveCount(rightSb, target, count+rightCount+countAToAnyUpper(target.charAt(rightNewIndex)), rightNewIndex);
 
         // 왼쪽으로 가장 가까운 교체할 알파벳 위치
         int leftCount = 1;
@@ -60,13 +56,20 @@ public class Greedy_02_Joystick {
                 leftNewIndex += target.length();
             }
 
-            if (target.charAt(leftNewIndex) == sb.charAt(leftNewIndex)) {
-                ++leftCount;
-            } else {
+            if (target.charAt(leftNewIndex) != sb.charAt(leftNewIndex)) {
                 break;
             }
+
+            ++leftCount;
         }
-        StringBuilder leftSb = new StringBuilder(sb.toString());
+
+        // 오른쪽 재귀
+        StringBuilder rightSb = new StringBuilder(sb);
+        rightSb.setCharAt(rightNewIndex, target.charAt(rightNewIndex));
+        recursiveCount(rightSb, target, count+rightCount+countAToAnyUpper(target.charAt(rightNewIndex)), rightNewIndex);
+
+        // 왼쪽 재귀
+        StringBuilder leftSb = new StringBuilder(sb);
         leftSb.setCharAt(leftNewIndex, target.charAt(leftNewIndex));
         recursiveCount(leftSb, target, count+leftCount+countAToAnyUpper(target.charAt(leftNewIndex)), leftNewIndex);
     }
