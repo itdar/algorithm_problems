@@ -14,10 +14,7 @@ public class ClockHourMinSecCount {
      * int n = 3;
      */
     public static boolean clockHourMinSecCount(int hour, int min, int sec, int n) {
-        if (hour % 10 == n || min / 10 == n || min % 10 == n || sec / 10 == n || sec % 10 == n) {
-            return true;
-        }
-        return false;
+        return hour % 10 == n || min / 10 == n || min % 10 == n || sec / 10 == n || sec % 10 == n;
     }
 
     /**
