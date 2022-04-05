@@ -3,35 +3,49 @@ package algorithm_sites.codility;
 import java.util.Stack;
 
 public class StoneWall {
-    public static int solution(int[] H) {
-        if (H.length == 0) {
-            return 0;
-        }
+    public int solution(int[] H) {
         if (H.length == 1) {
             return 1;
         }
 
-        Stack<Integer> stack = new Stack<>();
-
         int count = 0;
+
+        Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < H.length; ++i) {
-            if (stack.empty() || stack.peek() < H[i]) {
+            if (stack.isEmpty()) {
+                ++count;
+                stack.push(H[i]);
+                continue;
+            }
+
+            Integer prevHeight = stack.peek();
+
+            if (H[i] < prevHeight) {
+                if (!findSameOrPop(stack, H[i])) {
+                    stack.push(H[i]);
+                    ++count;
+                }
+            } else if (H[i] > prevHeight) {
                 stack.push(H[i]);
                 ++count;
-            } else if (stack.peek() == H[i]) {
-                stack.pop();
-            } else if (stack.peek() > H[i]){
-                stack.pop();
-                ++count;
             }
+
+//            System.out.println("stack = " + stack);
         }
 
         return count;
     }
 
-    public static void main(String args[]) {
-        int result = solution(new int[]{8, 8, 5, 7, 9, 8, 7, 4, 8});
-
-        System.out.println(result);
+    private boolean findSameOrPop(Stack<Integer> stack, int number) {
+        while (!stack.isEmpty()) {
+            if (stack.peek() > number) {
+                stack.pop();
+            } else if (stack.peek() < number) {
+                return false;
+            } else if (stack.peek() == number) {
+                return true;
+            }
+        }
+        return false;
     }
 }
