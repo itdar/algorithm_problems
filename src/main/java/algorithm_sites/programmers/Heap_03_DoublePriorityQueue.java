@@ -26,19 +26,14 @@ public class Heap_03_DoublePriorityQueue {
             } else if (maxQueue.size() > 0 && operation.startsWith("D") && operation.endsWith(" 1")) {
                 maxQueue.poll();
                 ++removeCount;
-
-                if (addCount <= removeCount) {
-                    maxQueue.clear();
-                    minQueue.clear();
-                }
             } else if (minQueue.size() > 0 && operation.startsWith("D") && operation.endsWith("-1")) {
                 minQueue.poll();
                 ++removeCount;
+            }
 
-                if (addCount <= removeCount) {
-                    maxQueue.clear();
-                    minQueue.clear();
-                }
+            if (addCount <= removeCount) {
+                maxQueue.clear();
+                minQueue.clear();
             }
         }
 

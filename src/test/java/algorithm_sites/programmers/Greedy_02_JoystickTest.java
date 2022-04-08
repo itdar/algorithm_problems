@@ -35,4 +35,23 @@ class Greedy_02_JoystickTest {
         assertThat(result).isEqualTo(12);
     }
 
+    @Test
+    void solutionTest5() {
+        int result = joystick.solution("BABAAAAAAAAAAAAB");
+
+        // // 오른쪽
+        // 위로1, 오른쪽1, 오른쪽1, 위로1, 왼쪽1, 왼쪽1, 왼쪽1, 위로1 => 8
+        // // 왼쪽
+        // 위로1, 왼쪽1, 위로1, 오른쪽1, 오른쪽1, 오른쪽1, 위로1 => 7
+
+        assertThat(result).isEqualTo(7);
+    }
+
+    @Test
+    void solutionTest6() {
+        int result = joystick.solution("ABBAAAAAAAAAAAAB");
+
+        assertThat(result).isEqualTo(7);
+    }
+
 }
