@@ -29,9 +29,10 @@ public class MRT_1_PhoneHistory {
 
             if (last.isSameLog(currentLog)) {
                 last.plusCount();
-            } else {
-                histories.addLast(new History(currentLog));
+                continue;
             }
+
+            histories.addLast(new History(currentLog));
         }
 
         List<String> results = histories.stream()
@@ -85,9 +86,7 @@ public class MRT_1_PhoneHistory {
 
         String previous = null;
         int count = 0;
-        for (int i = 0; i < logs.size(); ++i) {
-            String log = logs.get(i);
-
+        for (String log : logs) {
             if (previous == null || previous.isEmpty()) {
                 previous = log;
                 continue;
