@@ -4,7 +4,7 @@ public class PermutationExample {
     static int num = 0;
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,1};
+        int[] arr = {1,2,3};
         int n = arr.length;
         int r = 4;
 
