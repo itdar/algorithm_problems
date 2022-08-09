@@ -38,8 +38,7 @@ public class ProgrammersLineGlo2 {
             return filtered.get(0).toString();
         }
 
-        boolean[] isError = new boolean[filtered.size()];
-        analyzeError(results, filtered, isError);
+        analyzeError(results, filtered);
 
         if (results.isEmpty()) {
             return ERROR;
@@ -55,7 +54,7 @@ public class ProgrammersLineGlo2 {
         return (int) (sum / results.size());
     }
 
-    private static void analyzeError(List<Integer> results, List<Integer> filtered, boolean[] isError) {
+    private static void analyzeError(List<Integer> results, List<Integer> filtered) {
         for (int i = 0; i < filtered.size(); ++i) {
 
             int start = Math.max(i-2, 0);
@@ -64,16 +63,9 @@ public class ProgrammersLineGlo2 {
 
             boolean isValid = false;
             for (int j = start; j < end; ++j) {
-                if (!isError[j]) {
-                    if (i != j) {
-                        if (Math.abs(checkVal - filtered.get(j)) < MAX_DIFF) {
-                            isValid = true;
-                            break;
-                        } else {
-                            isError[i] = true;
-                            isError[j] = true;
-                        }
-                    }
+                if (i != j && Math.abs(checkVal - filtered.get(j)) < MAX_DIFF) {
+                    isValid = true;
+                    break;
                 }
             }
 
