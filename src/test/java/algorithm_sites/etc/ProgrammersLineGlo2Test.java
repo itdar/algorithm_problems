@@ -52,7 +52,14 @@ class ProgrammersLineGlo2Test {
     void solutionTest7() {
         String result = ProgrammersLineGlo2.solution("1");
 
-        assertThat(result).isEqualTo("1");
+        assertThat(result).isEqualTo("ERROR");
+    }
+
+    @Test
+    void solutionTest8() {
+        String result = ProgrammersLineGlo2.solution("195 200 201 202 203 198 196 194");
+
+        assertThat(result).isEqualTo("196");
     }
 
 }

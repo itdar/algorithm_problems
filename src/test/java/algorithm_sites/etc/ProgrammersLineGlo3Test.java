@@ -43,4 +43,25 @@ class ProgrammersLineGlo3Test {
         assertThat(result).isEqualTo(2);
     }
 
+    @Test
+    void solutionTest6() {
+        int result = glo3.solution(10, new int[]{1,2,2,7,8});
+
+        assertThat(result).isEqualTo(2);
+    }
+
+    @Test
+    void solutionTest7() {
+        int result = glo3.solution(5, new int[]{1,1,2,3,3});
+
+        assertThat(result).isEqualTo(2);
+    }
+
+    @Test
+    void solutionTest8() {
+        int result = glo3.solution(10, new int[]{1,2,2,7,8,1,2,2,7,8,10,10,10});
+
+        assertThat(result).isEqualTo(7);
+    }
+
 }
