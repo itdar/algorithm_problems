@@ -14,7 +14,7 @@ public class Programmers_Hash_03 {
             set.add(num);
         }
 
-        return set.size();
+        return Math.min(set.size(), nums.length / 2);
     }
 
 }
