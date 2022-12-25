@@ -1,0 +1,35 @@
+package algorithm_sites.programmers.kit202212;
+
+import java.util.Stack;
+
+public class Programmers_StackQueue_01 {
+
+    public int[] solution(int[] inputArray) {
+        if (inputArray == null || inputArray.length == 0) {
+            return new int[] {};
+        }
+
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < inputArray.length; ++i) {
+            if (stack.isEmpty()) {
+                stack.push(inputArray[i]);
+                continue;
+            }
+
+            if (stack.peek() != inputArray[i]) {
+                stack.push(inputArray[i]);
+            }
+        }
+
+        int[] ints = stack.stream()
+            .mapToInt(value -> value)
+            .toArray();
+
+//        for (int anInt : ints) {
+//            System.out.print(anInt + ",");
+//        }
+
+        return ints;
+    }
+
+}
