@@ -1,10 +1,9 @@
 package algorithm_sites.programmers.kit202212;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Set;
 
 public class Programmers_Heap_02 {
 
@@ -13,41 +12,44 @@ public class Programmers_Heap_02 {
             return 0;
         }
 
-        Set<Integer> set = new HashSet<>();
-        List<Node> nodeList = new LinkedList<>();
+        List<Node> nodeList = new ArrayList<>();
         for (int i = 0; i < jobs.length; ++i) {
             nodeList.add(new Node(i, jobs[i][0], jobs[i][1]));
-            set.add(jobs[i][0]);
         }
 
-        Node currentTask = null;
+        List<Integer> spentTimes = new LinkedList<>();
+
         PriorityQueue<Node> priorityQueue = new PriorityQueue();
-        for (Integer inTime : set) {
+        int currentTime = nodeList.stream().mapToInt(value -> value.inTime).min().getAsInt();
+        while (spentTimes.size() != jobs.length) {
             for (int i = 0; i < nodeList.size(); ++i) {
-                if (nodeList.get(i).inTime <= inTime) {
+                if (nodeList.get(i).inTime <= currentTime) {
                     priorityQueue.add(nodeList.get(i));
+                    nodeList.remove(i);
+                    --i;
                 }
             }
 
-            if (!priorityQueue.isEmpty()) {
-                if (currentTask == null) {
-                    currentTask = priorityQueue.poll();
-                }
+            if (priorityQueue.isEmpty()) {
+                ++currentTime;
+                continue;
             }
+
+            Node node = priorityQueue.poll();
+            spentTimes.add((currentTime + node.workingTime) - node.inTime);
+            currentTime += node.workingTime;
         }
 
-//        while (!priorityQueue.isEmpty()) {
-//            System.out.print(priorityQueue.poll().workingTime + ",");
-//        }
-
-        int answer = 0;
-        return answer;
+        return (int) Math.floor(spentTimes.stream()
+            .mapToInt(value -> value)
+            .sum() / spentTimes.size());
     }
 
     private class Node implements Comparable<Node> {
         private int index;
         private int inTime;
         private int workingTime;
+        private boolean isDone = false;
 
         public Node(int index, int inTime, int workingTime) {
             this.index = index;
@@ -61,6 +63,10 @@ public class Programmers_Heap_02 {
                 return 1;
             }
             return -1;
+        }
+
+        public void done() {
+            this.isDone = true;
         }
     }
 
