@@ -23,7 +23,7 @@ public class PermutationExample {
     }
 
     //중복순열 (순서있게 배열 + 자기자신도 포함)
-    private static void rePermutation(int[] arr, int[] output, int depth, int n, int r) {
+    public static void rePermutation(int[] arr, int[] output, int depth, int n, int r) {
         if (depth == r) {
             for (int i = 0 ; i < r; ++i) {
                 System.out.print(output[i] + " ");
@@ -41,7 +41,7 @@ public class PermutationExample {
     }
 
     //순열 (순서있게 배열, 자기자신 중복금지)
-    private static void permutation(int[] arr, int[] output, boolean[] visited, int depth, int n, int r) {
+    public static void permutation(int[] arr, int[] output, boolean[] visited, int depth, int n, int r) {
         if (depth == r) {
             for (int i = 0 ; i < r; ++i) {
                 System.out.print(output[i] + " ");
