@@ -38,7 +38,16 @@ public class Programmers_Greedy_05 {
         int ap = findParent(node1);
         int bp = findParent(node2);
 
-        disjointSet[bp] = ap;
+        if (ap <= bp) {
+            disjointSet[bp] = ap;
+            disjointSet[node1] = ap;
+            disjointSet[node2] = ap;
+            return;
+        }
+
+        disjointSet[ap] = bp;
+        disjointSet[node1] = bp;
+        disjointSet[node2] = bp;
     }
 
     public int findParent(int x) {
