@@ -23,7 +23,7 @@ public class Programmers_Greedy_05 {
                 int node1 = costs[i][0];
                 int node2 = costs[i][1];
 
-                if (disjointSet[node1] != disjointSet[node2]) {
+                if (findParent(node1) != findParent(node2)) {
                     sum += costs[i][2];
                     ++lineCount;
                     union(node1, node2);
@@ -39,8 +39,6 @@ public class Programmers_Greedy_05 {
         int bp = findParent(node2);
 
         disjointSet[bp] = ap;
-        disjointSet[node1] = ap;
-        disjointSet[node2] = ap;
     }
 
     public int findParent(int x) {
