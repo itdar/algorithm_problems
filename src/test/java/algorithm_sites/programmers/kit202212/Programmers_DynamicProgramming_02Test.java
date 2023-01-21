@@ -17,4 +17,13 @@ class Programmers_DynamicProgramming_02Test {
         assertThat(result).isEqualTo(30);
     }
 
+    @Test
+    void solutionTest2() {
+        int[][] triangle = new int[][] {{7}};
+
+        int result = programmers_dynamicProgramming_02.solution(triangle);
+
+        assertThat(result).isEqualTo(7);
+    }
+
 }
