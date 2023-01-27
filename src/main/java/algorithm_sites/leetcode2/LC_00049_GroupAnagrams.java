@@ -3,39 +3,38 @@ package algorithm_sites.leetcode2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class LC_00049_GroupAnagrams {
 
-    private List<List<String>> groupAnagrams = new ArrayList<>();
-    private Map<String, List<String>> map = new HashMap<>();
-
     public List<List<String>> groupAnagrams(String[] input) {
-        String anaString;
+        List<List<String>> results = new ArrayList<>();
+        Map<String, List<String>> map = new HashMap<>();
 
-        ArrayList<String> group;
-        char[] anaChars;
-        for (int j = 0; j < input.length; ++j) {
-            anaString = input[j];
-            anaChars = anaString.toCharArray();
+        for (String origin : input) {
+            char[] chars = origin.toCharArray();
+            Arrays.sort(chars);
+            String sorted = new String(chars);
 
-            Arrays.sort(anaChars);
-            String sortedStr = new String(anaChars);
-
-            if (map.containsKey(sortedStr)) {
-                map.get(sortedStr).add(anaString);
+            if (!map.containsKey(sorted)) {
+                ArrayList<String> strings = new ArrayList<>();
+                strings.add(origin);
+                map.put(sorted, strings);
                 continue;
             }
 
-            group = new ArrayList<>();
-            group.add(anaString);
-
-            map.put(sortedStr, group);
+            List<String> strings = map.get(sorted);
+            strings.add(origin);
         }
 
-        groupAnagrams.addAll(new ArrayList<>(map.values()));
-        return groupAnagrams;
+        for (List<String> value : map.values()) {
+            results.add(value);
+        }
+
+        return results;
     }
 
 }
