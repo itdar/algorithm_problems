@@ -2,46 +2,36 @@ package algorithm_sites.leetcode2;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 
 public class LC_00020_ValidParentheses {
 
     public boolean isValid(String s) {
-        Deque<Character> deque = new ArrayDeque<>();
+        Deque<Character> deque = new LinkedList<>();
 
-        char character;
-        int index = 0;
-        while (index < s.length()) {
-            character = s.charAt(index++);
+        for (int i = 0; i < s.length(); ++i) {
+            char charAt = s.charAt(i);
 
             if (deque.isEmpty()) {
-                deque.addLast(character);
+                deque.addLast(charAt);
                 continue;
             }
 
-            Character popChar = deque.pollLast();
-            if (!isOppositeParenthesis(popChar, character)) {
-                deque.addLast(popChar);
-                deque.addLast(character);
+            if (isPair(deque.peekLast(), charAt)) {
+                deque.removeLast();
+                continue;
             }
+
+            deque.addLast(charAt);
         }
 
         return deque.isEmpty();
     }
 
-    private boolean isOppositeParenthesis(Character popChar, char character) {
-        if (popChar == '[') {
-            return character == ']';
-        }
-
-        if (popChar == '{') {
-            return character == '}';
-        }
-
-        if (popChar == '(') {
-            return character == ')';
-        }
-
-        return false;
+    private boolean isPair(char char1, Character char2) {
+        return (char1 == '(' && char2 == ')')
+            || (char1 == '[' && char2 == ']')
+            || (char1 == '{' && char2 == '}');
     }
 
 }
