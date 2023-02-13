@@ -20,5 +20,9 @@ class LC_00125_ValidPalindromeTest {
     void solutionTest3() {
         assertThat(lc.isPalindrome(" ")).isTrue();
     }
+    @Test
+    void solutionTest4() {
+        assertThat(lc.isPalindrome("0P")).isFalse();
+    }
 
 }
