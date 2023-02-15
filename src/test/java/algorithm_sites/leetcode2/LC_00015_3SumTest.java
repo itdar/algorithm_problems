@@ -19,16 +19,25 @@ class LC_00015_3SumTest {
 
     @Test
     public void threeSumTest2() {
-        List<List<Integer>> lists = lc.threeSum(new int[]{});
+        List<List<Integer>> lists = lc.threeSum(new int[]{0,1,1});
 
         assertThat(lists).isEmpty();
     }
 
     @Test
     public void threeSumTest3() {
-        List<List<Integer>> lists = lc.threeSum(new int[]{0});
+        List<List<Integer>> lists = lc.threeSum(new int[]{0,0,0});
 
-        assertThat(lists).isEmpty();
+        assertThat(lists.get(0)).contains(0,0,0);
+    }
+
+    @Test
+    public void threeSumTest4() {
+        List<List<Integer>> lists = lc.threeSum(new int[]{-1,0,1,2,-1,-4});
+
+        assertThat(lists).hasSize(2);
+        assertThat(lists.get(0)).contains(-1,-1,2);
+        assertThat(lists.get(1)).contains(-1,0,1);
     }
 
 }
