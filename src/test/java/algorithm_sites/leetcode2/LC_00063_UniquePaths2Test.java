@@ -16,6 +16,7 @@ class LC_00063_UniquePaths2Test {
 
         assertThat(result).isEqualTo(2);
     }
+
     @Test
     void solutionTest2() {
         int[][] grid = new int[][] {{0,1},{0,0}};
