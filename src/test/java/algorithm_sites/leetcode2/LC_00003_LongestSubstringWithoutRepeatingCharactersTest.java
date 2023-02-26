@@ -28,5 +28,13 @@ class LC_00003_LongestSubstringWithoutRepeatingCharactersTest {
     void solutionTest5() {
         assertThat(lc.lengthOfLongestSubstring("dvdf")).isEqualTo(3);
     }
+    @Test
+    void solutionTest6() {
+        assertThat(lc.lengthOfLongestSubstring("aabaab!bb")).isEqualTo(3);
+    }
+    @Test
+    void solutionTest7() {
+        assertThat(lc.lengthOfLongestSubstring("bpfbhmipx")).isEqualTo(7);
+    }
 
 }
