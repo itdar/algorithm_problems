@@ -1,7 +1,7 @@
 package algorithm_sites.leetcode;
 
 public class LeetCode_0002_AddTwoNumbers {
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
         ListNode() {}

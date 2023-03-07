@@ -29,7 +29,7 @@ public class LC_00206_ReverseLinkedList {
         return result;
     }
 
-    public static class ListNode {
+    protected static class ListNode {
         int val;
         ListNode next;
         ListNode() {}
